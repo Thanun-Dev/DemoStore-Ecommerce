@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Store</title>
+    <link rel="shortcut icon" href="../img/online-shopping.png" type="image/x-icon">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Hover Dropdown CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kmlpandey77/bootnavbar@v1.1.1/css/bootnavbar.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <!--Top navbar-->
+    <nav class="nav bg-blue ">
+        <div class="container-md d-flex align-items-center justify-content-between py-1">
+          <div>
+          <button type="button" class="btn border-0 p-0">
+              <a href="https://www.google.com/maps?q=Cambodia" target="_blank" class="nav-link p-1 text-white text-uppercase">
+              <i class="fa-solid fa-earth-asia"></i>
+              <span>Cambodia</span>
+              </a>
+          </button>
+          <button type="button" class="btn border-0 p-0">
+              <a href="tel:+855 61339957" class="nav-link p-1 text-white text-uppercase">
+              <i class="fa-solid fa-phone-volume"></i>
+              <span>+855 61339957</span>
+          </a>
+          </button>
+          </div>
+          <div class="translator">
+              <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="glink nturl notranslate"><img src="../img/en.svg" height="24" width="24" alt="English" /> <span class="text-white">EN</span></a> <a href="#" onclick="doGTranslate('en|km');return false;" title="ភាសាខ្មែរ" class="glink nturl notranslate"><img src="../img/km.svg" height="24" width="24" alt="ភាសាខ្មែរ" /> <span class="text-white">KH</span></a>
+              <div id="google_translate_element2"></div>
+          </div>
+          <div class="d-none d-lg-flex">
+              <a href="https://www.facebook.com/thanun2903" class="nav-link text-white px-2">
+                  <i class="fa-brands fa-facebook fa-lg"></i>
+              </a>
+              <a href="https://www.instagram.com/cc_thanun" class="nav-link text-white px-2">
+                  <i class="fa-brands fa-instagram fa-lg"></i>
+              </a>
+              <a href="https://twitter.com/mrrdemo" class="nav-link text-white px-2">
+                  <i class="fa-brands fa-twitter fa-lg"></i>
+              </a>
+              <a href="mailto: cc.thanun@gmail.com" class="nav-link text-white px-2">
+                  <i class="fa-regular fa-envelope fa-lg"></i>
+              </a>
+          </div>
+        </div>
+      </nav>
+      <!--End Top navbar-->
+
+    <!--Middle Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_navbar">
+        <div class="container-md">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="../index.html" class="navbar-brand mx-auto">
+            <img src="../img/Demo-logo.png" alt="Logo">
+            </a>
+            <div class="order-lg-last me-2">
+                <div class="btn-group d-none d-lg-inline">
+                    <button type="button" class="btn border-0 d-none d-lg-inline pe-0">
+                        <a href="../pages/myaccount.html" class="nav-link">
+                            <i class="fa-solid fa-user fa-lg"></i>
+                            My Account
+                        </a>
+                    </button>
+                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../pages/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                      <li><a class="dropdown-item" href="../pages/register.html"><i class="fa-regular fa-address-card"></i> Register</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="../pages/order-history.html"><i class="fa-solid fa-clock-rotate-left"></i> Order History</a></li>
+                    </ul>
+                  </div>
+                <button type="button" class="btn position-relative border-0">
+                    <a href="../pages/wishlist.html" class="nav-link">
+                    <span class="d-none d-md-inline">Wishlist</span>
+                    <i class="fa fa-heart fa-lg"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">5</span>
+                    </a>
+                </button>
+                <button type="button" class="btn position-relative border-0 dropdown">
+                    <a href="../pages/cart.html" class="nav-link">
+                    <span class="d-none d-md-inline">Cart</span>
+                    <i class="fa fa-shopping-cart fa-lg"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">5</span>
+                    
+                    </a>
+                    <div class="dropdown-menu animate__animated animate__fadeIn" style="min-width: 350px !important; right:0 !important; top:100% !important;">
+                        <div w3-include-html="../pages/minicart.html"></div> 
+                      </div>
+                </button>
+                
+            </div>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center d-lg-none">
+                    <li class="nav-item p-2">
+                        <a href="../index.html" class="nav-link text-uppercase text-blue"  aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/shop.html" class="nav-link text-uppercase text-blue">Shop</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/blog.html" class="nav-link text-uppercase text-blue">Blog</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/about.html" class="nav-link text-uppercase text-blue">About</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/contact.html" class="nav-link text-uppercase text-blue">Contact</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/faq.html" class="nav-link text-uppercase text-blue">FAQ</a>
+                    </li>
+                    <li class="nav-item p-2">
+                                <a href="../pages/myaccount.html" class="nav-link collapsed">
+                                    <i class="fa-solid fa-user fa-lg"></i>
+                                    My Account
+                                </a>
+                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="../pages/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                              <li><a class="dropdown-item" href="../pages/register.html"><i class="fa-regular fa-address-card"></i> Register</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="../pages/order-history.html"><i class="fa-solid fa-clock-rotate-left"></i> Order History</a></li>
+                            </ul>
+                    </li>
+                </ul>
+                <form class="d-flex container" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--End Middle navbar-->
+    
+    <!--Menu Navbar-->
+    <div class="bg-blue d-none d-lg-block">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item p-2">
+                    <a href="../index.html" class="nav-link text-uppercase text-white"  aria-current="page">Home</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="../pages/shop.html" class="nav-link text-uppercase text-white">Shop</a>
+                </li>
+                 <li class="nav-item p-2">
+                    <a href="../pages/blog.html" class="nav-link text-uppercase text-white">Blog</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="../pages/about.html" class="nav-link text-uppercase text-white">About</a>
+                </li>
+                 <li class="nav-item p-2">
+                    <a href="../pages/contact.html" class="nav-link text-uppercase text-white">Contact</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="../pages/faq.html" class="nav-link text-uppercase text-white">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--End Menu Navbar-->
+
+    
+
+    <div class="container p-4 my-3">
+        <h1 class=" text-uppercase text-primary text-center mb-5">Privacy Policy</h1>
+        <div class="text p-3 shadow rounded">
+            <p>&nbsp; &nbsp;At DEMO Shop, accessible from demoshop.online, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by DEMO Shop and how we use it.</p>
+            <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
+            <p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in DEMO Shop. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the <a href="https://www.privacypolicygenerator.info/" target="_blank" class=" text-decoration-none">Free Privacy Policy Generator</a>.</p>
+            <h2  class="text-center text-info">Consent</h2>
+            <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+            <h2  class="text-center text-info">Information we collect</h2>
+            <p>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.</p>
+            <p>If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.</p>
+            <p>When you register for an Account, we may ask for your contact information, including items such as name, company name, address, email address, and telephone number.</p>
+            <h2  class="text-center text-info">How we use your information</h2>
+            <p>We use the information we collect in various ways, including to:</p>
+            <ul>
+            <li>Provide, operate, and maintain our website</li>
+            <li>Improve, personalize, and expand our website</li>
+            <li>Understand and analyze how you use our website</li>
+            <li>Develop new products, services, features, and functionality</li>
+            <li>Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the website, and for marketing and promotional purposes</li>
+            <li>Send you emails</li>
+            <li>Find and prevent fraud</li>
+            </ul>
+            <h2  class="text-center text-info">Log Files</h2>
+            <p>DEMO Shop follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services’ analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users’ movement on the website, and gathering demographic information.</p>
+            <h2  class="text-center text-info">Cookies and Web Beacons</h2>
+            <p>Like any other website, DEMO Shop uses ‘cookies’. These cookies are used to store information including visitors’ preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users’ experience by customizing our web page content based on visitors’ browser type and/or other information.</p>
+            <h2  class="text-center text-info">Advertising Partners Privacy Policies</h2>
+            <p>You may consult this list to find the Privacy Policy for each of the advertising partners of DEMO Shop.</p>
+            <p>Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on DEMO Shop, which are sent directly to users’ browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
+            <p>Note that DEMO Shop has no access to or control over these cookies that are used by third-party advertisers.</p>
+            <h2  class="text-center text-info">Third Party Privacy Policies</h2>
+            <p>DEMO Shop’s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
+            <p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers’ respective websites.</p>
+            <h2  class="text-center text-info">CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
+            <p>Under the CCPA, among other rights, California consumers have the right to:</p>
+            <p>Request that a business that collects a consumer’s personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</p>
+            <p>Request that a business delete any personal data about the consumer that a business has collected.</p>
+            <p>Request that a business that sells a consumer’s personal data, not sell the consumer’s personal data.</p>
+            <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
+            <h2  class="text-center text-info">GDPR Data Protection Rights</h2>
+            <p>We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
+            <p>The right to access – You have the right to request copies of your personal data. We may charge you a small fee for this service.</p>
+            <p>The right to rectification – You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete.</p>
+            <p>The right to erasure – You have the right to request that we erase your personal data, under certain conditions.</p>
+            <p>The right to restrict processing – You have the right to request that we restrict the processing of your personal data, under certain conditions.</p>
+            <p>The right to object to processing – You have the right to object to our processing of your personal data, under certain conditions.</p>
+            <p>The right to data portability – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</p>
+            <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
+            <h2  class="text-center text-info">Children’s Information</h2>
+            <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+            <p>DEMO Shop does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
+            
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="footer-bg pt-5 pb-3">
+        <div class="container">
+            <div class="row text-white g-4">
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <a href="../index.html" class="text-uppercase text-decoration-none text-white brand display-5 fw-bold">DEMO Store</a>
+                    <p class="text-white mt-3">Welcome to DEMO Store. We will bring you only high quality products.</p>
+                    <div>
+                        <ul class="list-unstyled d-flex">
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">
+                                    <i class="fa-brands fa-facebook fa-lg fs-4 me-4"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">
+                                    <i class="fa-brands fa-instagram fa-lg fs-4 me-4"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">
+                                    <i class="fa-brands fa-twitter fa-lg fs-4 me-4"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class=" fw-bolder">Menu</h5>
+                    <ul class=" list-unstyled">
+                        <li class="my-3">
+                            <a href="../index.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Home
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/shop.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Shop
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/blog.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Blog
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/about.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>About
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/faq.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>FAQ
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/category.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Category
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class="fw-bolder">My Account</h5>
+                    <ul class=" list-unstyled">
+                        <li class="my-3">
+                            <a href="../pages/myaccount.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Account Profile
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/register.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Register
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/login.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Login
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/wishlist.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Wishlist
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/order-history.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Order History
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class="fw-bolder">Pages</h5>
+                    <ul class=" list-unstyled">
+                        <li class="my-3">
+                            <a href="../pages/cart.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Cart
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/minicart.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Mini Cart
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/checkout.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Checkout
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/order.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Order
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/product-details.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Product Details
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/terms-and-conditions.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Terms And Conditions
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/privacy-policy.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Privacy Policy
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/return-policy.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Return and Refund Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class="fw-bolder mb-3">Contact Us</h5>
+                    <div class="d-flex justify-content-start align-items-start my-2">
+                        <span class="me-3">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class="fw-light">Toulkok, Phnom Penh, Cambodia</span>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-start my-2">
+                        <span class="me-3">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </span>
+                        <span class="fw-light">+855 61339957</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col text-center pt-3">
+                    <i class="fa-regular fa-copyright"></i> Copyright by CC.Thanun
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Bootstrap JS-->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!--Traslator JS-->
+    <script src="../js/translator.js"></script>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kmlpandey77/bootnavbar@v1.1.1/js/bootnavbar.js"></script>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+              elmnt = z[i];
+              /*search for elements with a certain attribute:*/
+              file = elmnt.getAttribute("w3-include-html");
+              if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                  if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    /*remove the attribute, and call this function once more:*/
+                    elmnt.removeAttribute("w3-include-html");
+                    includeHTML();
+                  }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+              }
+            }
+          };
+    </script>
+    <script>
+        includeHTML();
+        new bootnavbar();
+    </script>  
+</body>
+</html>

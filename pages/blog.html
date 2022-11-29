@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Store</title>
+    <link rel="shortcut icon" href="../img/online-shopping.png" type="image/x-icon">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Hover Dropdown CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kmlpandey77/bootnavbar@v1.1.1/css/bootnavbar.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <!--Top navbar-->
+    <nav class="nav bg-blue ">
+        <div class="container-md d-flex align-items-center justify-content-between py-1">
+          <div>
+          <button type="button" class="btn border-0 p-0">
+              <a href="https://www.google.com/maps?q=Cambodia" target="_blank" class="nav-link p-1 text-white text-uppercase">
+              <i class="fa-solid fa-earth-asia"></i>
+              <span>Cambodia</span>
+              </a>
+          </button>
+          <button type="button" class="btn border-0 p-0">
+              <a href="tel:+855 61339957" class="nav-link p-1 text-white text-uppercase">
+              <i class="fa-solid fa-phone-volume"></i>
+              <span>+855 61339957</span>
+          </a>
+          </button>
+          </div>
+          <div class="translator">
+              <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="glink nturl notranslate"><img src="../img/en.svg" height="24" width="24" alt="English" /> <span class="text-white">EN</span></a> <a href="#" onclick="doGTranslate('en|km');return false;" title="ភាសាខ្មែរ" class="glink nturl notranslate"><img src="../img/km.svg" height="24" width="24" alt="ភាសាខ្មែរ" /> <span class="text-white">KH</span></a>
+              <div id="google_translate_element2"></div>
+          </div>
+          <div class="d-none d-lg-flex">
+              <a href="https://www.facebook.com/thanun2903" class="nav-link text-white px-2">
+                  <i class="fa-brands fa-facebook fa-lg"></i>
+              </a>
+              <a href="https://www.instagram.com/cc_thanun" class="nav-link text-white px-2">
+                  <i class="fa-brands fa-instagram fa-lg"></i>
+              </a>
+              <a href="https://twitter.com/mrrdemo" class="nav-link text-white px-2">
+                  <i class="fa-brands fa-twitter fa-lg"></i>
+              </a>
+              <a href="mailto: cc.thanun@gmail.com" class="nav-link text-white px-2">
+                  <i class="fa-regular fa-envelope fa-lg"></i>
+              </a>
+          </div>
+        </div>
+      </nav>
+      <!--End Top navbar-->
+
+    <!--Middle Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_navbar">
+        <div class="container-md">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="../index.html" class="navbar-brand mx-auto">
+            <img src="../img/Demo-logo.png" alt="Logo">
+            </a>
+            <div class="order-lg-last me-2">
+                <div class="btn-group d-none d-lg-inline">
+                    <button type="button" class="btn border-0 d-none d-lg-inline pe-0">
+                        <a href="../pages/myaccount.html" class="nav-link">
+                            <i class="fa-solid fa-user fa-lg"></i>
+                            My Account
+                        </a>
+                    </button>
+                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../pages/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                      <li><a class="dropdown-item" href="../pages/register.html"><i class="fa-regular fa-address-card"></i> Register</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="../pages/order-history.html"><i class="fa-solid fa-clock-rotate-left"></i> Order History</a></li>
+                    </ul>
+                  </div>
+                <button type="button" class="btn position-relative border-0">
+                    <a href="../pages/wishlist.html" class="nav-link">
+                    <span class="d-none d-md-inline">Wishlist</span>
+                    <i class="fa fa-heart fa-lg"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">5</span>
+                    </a>
+                </button>
+                <button type="button" class="btn position-relative border-0 dropdown">
+                    <a href="../pages/cart.html" class="nav-link">
+                    <span class="d-none d-md-inline">Cart</span>
+                    <i class="fa fa-shopping-cart fa-lg"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">5</span>
+                    
+                    </a>
+                    <div class="dropdown-menu animate__animated animate__fadeIn" style="min-width: 350px !important; right:0 !important; top:100% !important;">
+                        <div w3-include-html="../pages/minicart.html"></div> 
+                      </div>
+                </button>
+                
+            </div>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center d-lg-none">
+                    <li class="nav-item p-2">
+                        <a href="../index.html" class="nav-link text-uppercase text-blue"  aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/shop.html" class="nav-link text-uppercase text-blue">Shop</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/blog.html" class="nav-link text-uppercase text-blue">Blog</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/about.html" class="nav-link text-uppercase text-blue">About</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/contact.html" class="nav-link text-uppercase text-blue">Contact</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/faq.html" class="nav-link text-uppercase text-blue">FAQ</a>
+                    </li>
+                    <li class="nav-item p-2">
+                                <a href="../pages/myaccount.html" class="nav-link collapsed">
+                                    <i class="fa-solid fa-user fa-lg"></i>
+                                    My Account
+                                </a>
+                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="../pages/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                              <li><a class="dropdown-item" href="../pages/register.html"><i class="fa-regular fa-address-card"></i> Register</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="../pages/order-history.html"><i class="fa-solid fa-clock-rotate-left"></i> Order History</a></li>
+                            </ul>
+                    </li>
+                </ul>
+                <form class="d-flex container" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--End Middle navbar-->
+    
+    <!--Menu Navbar-->
+    <div class="bg-blue d-none d-lg-block">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item p-2">
+                    <a href="../index.html" class="nav-link text-uppercase text-white"  aria-current="page">Home</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="../pages/shop.html" class="nav-link text-uppercase text-white">Shop</a>
+                </li>
+                 <li class="nav-item p-2">
+                    <a href="../pages/blog.html" class="nav-link text-uppercase text-white">Blog</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="../pages/about.html" class="nav-link text-uppercase text-white">About</a>
+                </li>
+                 <li class="nav-item p-2">
+                    <a href="../pages/contact.html" class="nav-link text-uppercase text-white">Contact</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="../pages/faq.html" class="nav-link text-uppercase text-white">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--End Menu Navbar-->
+
+    <main class="container mt-2">
+        <div class="p-4 p-md-5 mb-4 rounded" style="background: url(../img/blog/pic.png) no-repeat ; background-size:cover;">
+          <div class="col-md-6 text-white bg-primary bg-opacity-50 rounded p-4">
+            <h1 class="display-5 fst-italic">WHAT’S THE DIFFERENCE BETWEEN ROG’S ESPORTS LAPTOPS?</h1>
+            <p class="lead my-3">ROG is so committed to gamers, we put it right in our name. Every product [...]</p>
+            <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+          </div>
+        </div>
+      
+        <div class="row mb-2">
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">Apple</strong>
+                <h3 class="mb-0">Apple unveils M2</h3>
+                <div class="mb-1 text-muted">Nov 21</div>
+                <p class="card-text mb-auto">M2 delivers new levels of power-efficient performance and capabilities to the completely redesigned MacBook Air and updated 13-inch MacBook Pro.</p>
+                <a href="#" class="stretched-link">Continue reading</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img src="../img/blog/apple.jpg" class=" img-thumbnail" width="250px"></img>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">Gaming</strong>
+                <h3 class="mb-0">ROG STRIX SCAR VS STRIX G</h3>
+                <div class="mb-1 text-muted">Nov 21</div>
+                <p class="card-text mb-auto">WHAT’S THE DIFFERENCE BETWEEN ROG’S ESPORTS LAPTOPS?</p>
+                <a href="#" class="stretched-link">Continue reading</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img src="../img/blog/pic4.png" class=" img-thumbnail" width="250px"></img>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      
+        <div class="row g-5">
+          <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom text-muted">
+              From the Google
+            </h3>
+      
+            <article class="blog-post">
+              <h1 class="blog-post-title mb-1 text-primary">How to Get the Most Out of Your Laptop's Battery Life</h1>
+              <p class="blog-post-meta">November 27, 2022 by <a href="#">Thanun</a></p>
+              <img src="../img/blog/blog1.png" class=" img-thumbnail" alt="">
+              <p class="mt-2">There are many key elements laptop owners regularly consider when buying or operating their device, and one of the most notable here is the battery and its lifespan. We all naturally want our laptop batteries to last for as long as possible, and while purchasing a quality battery is your first main task here, there are also several other approaches you can utilize to maximizing your battery life on a regular basis.</p>
+              <hr>
+              <p>At PC Laptops, we're happy to offer a wide variety of laptops for sale, including several models that have high-performance batteries meant to last hours without a charge. In addition to prioritizing battery life when buying a new machine, what are some ways you can optimize battery life in any laptop? Here are some general tips.</p>
+              <h3>Don't Charge to 100%</h3>
+              <p>While we know it's always tempting to charge a laptop battery all the way to 100%, this is actually one of the least healthy things you can do for the battery. In general, it's best to keep your charge somewhere between 20% and 80%.</p>
+              <p>This allows the battery to retain a higher capacity over time while also rarely dipping into full discharge, which can be damaging. If your battery spends too much time overcharged, it will start to degrade faster as well.</p>
+              <blockquote class="blockquote">
+                <p>Unplug When You Can</p>
+              </blockquote>
+              <p>Once your laptop is charged and you're no longer tethered to an outlet, unplug it from the power cord. Even when not in use, a plugged-in laptop will slowly lose battery as it continues to draw power.</p>
+              <p>If you're using your laptop on battery power and don't need to be plugged in, it's best to unplug it as soon as possible.</p>
+              <h3>Lower Your Screen Brightness</h3>
+              <p>This is an easy way to eke out a little more battery life without really affecting your productivity or enjoyment. Simply lower the brightness of your screen until it's comfortable but not jarring, and you'll find that your battery lasts a bit longer.</p>
+              <p>You can also take this a step further by enabling your laptop's automatic brightness feature, which will lower the brightness of your screen in dimmer environments and conserve power. This, in turn, will help your battery last even longer.</p>
+              <h3>Tweak Your Power Settings</h3>
+              <p>Most laptops come with a variety of power settings that you can enable or disable to help conserve power. In general, it's best to enable as many power-saving features as you can without sacrificing too much in the way of performance.</p>
+              <p>From here, you can enable features like battery saver mode, which dims your screen and limits background activity when your battery is running low. You can also adjust your screen timeout settings and enable "sleep" mode when your lid is closed.</p>
+              <h3>Avoid Overheating Issues</h3>
+              <p>One thing batteries don't do well with is heat. When your laptop gets too hot, it can cause all sorts of problems, including reducing the lifespan of your battery.</p>
+              <p>You should also avoid using your laptop in hot environments, such as in direct sunlight or near a heat source. If you can, use a laptop cooling pad to help keep your laptop cool and improve its battery life.
+
+                With the right basic care and regular maintenance, you can easily get years of use out of your laptop's battery. Just remember to follow the tips above to help keep it running at its best.</p>
+            </article>
+      
+      
+            <article class="blog-post">
+              <h2 class="blog-post-title mb-1 text-primary">Common PC Upgrades to Consider</h2>
+              <p class="blog-post-meta">November 19, 2022 by <a href="#">Thanun</a></p>
+      
+              <p>At PC Laptops, we're here to help. We offer the very best customized desktop computers in the Salt Lake Valley, with quality processors, chipsets and memory configurations -- and also with many components that can be upgraded, either on your own or with the assistance of our professionals. What are some of the most common regular upgrades PC owners make to their machines over time, and why might they benefit your existing PC? Here's a rundown.</p>
+              <ul>
+                <li>Memory Storage</li>
+                <li>RAM</li>
+                <li>Graphics Card</li>
+                <li>Processor</li>
+                <li>Motherboards</li>
+                <li>Accessories</li>
+              </ul>
+              <p>For more on the common PC upgrades made by computer owners today, or to learn about any of our computers for sale or device repair services, speak to the team at PC Laptops today.</p>
+            </article>
+      
+            <nav class="blog-pagination mb-3" aria-label="Pagination">
+              <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+              <a class="btn btn-outline-secondary rounded-pill disabled">Newer</a>
+            </nav>
+      
+          </div>
+      
+          <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+              <div class="p-4 mb-3 bg-light rounded">
+                <h4 class="fst-italic">About</h4>
+                <p class="mb-0">This is where you can find all information related to computer. All information are from Google and the team writer.</p>
+              </div>
+      
+              <div class="p-4">
+                <h4 class="fst-italic">Archives</h4>
+                <ol class="list-unstyled mb-0">
+                  <li><a href="#">September 2022</a></li>
+                  <li><a href="#">October 2022</a></li>
+                  <li><a href="#">November 2022</a></li>
+                </ol>
+              </div>
+      
+              <div class="p-4">
+                <h4 class="fst-italic">Share</h4>
+                <div class="d-flex">
+                    <a href="https://www.facebook.com/thanun2903" class="nav-link text-primary px-2" target="_blank">
+                        <i class="fa-brands fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/cc_thanun" class="nav-link text-primary px-2" target="_blank">
+                        <i class="fa-brands fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://twitter.com/mrrdemo" class="nav-link text-primary px-2" target="_blank">
+                        <i class="fa-brands fa-twitter fa-2x"></i>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </main>
+
+    <!--Footer-->
+    <footer class="footer-bg pt-5 pb-3">
+        <div class="container">
+            <div class="row text-white g-4">
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <a href="../index.html" class="text-uppercase text-decoration-none text-white brand display-5 fw-bold">DEMO Store</a>
+                    <p class="text-white mt-3">Welcome to DEMO Store. We will bring you only high quality products.</p>
+                    <div>
+                        <ul class="list-unstyled d-flex">
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">
+                                    <i class="fa-brands fa-facebook fa-lg fs-4 me-4"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">
+                                    <i class="fa-brands fa-instagram fa-lg fs-4 me-4"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">
+                                    <i class="fa-brands fa-twitter fa-lg fs-4 me-4"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class=" fw-bolder">Menu</h5>
+                    <ul class=" list-unstyled">
+                        <li class="my-3">
+                            <a href="../index.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Home
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/shop.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Shop
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/blog.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Blog
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/about.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>About
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/faq.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>FAQ
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/category.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Category
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class="fw-bolder">My Account</h5>
+                    <ul class=" list-unstyled">
+                        <li class="my-3">
+                            <a href="../pages/myaccount.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Account Profile
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/register.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Register
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/login.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Login
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/wishlist.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Wishlist
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/order-history.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Order History
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class="fw-bolder">Pages</h5>
+                    <ul class=" list-unstyled">
+                        <li class="my-3">
+                            <a href="../pages/cart.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Cart
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/minicart.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Mini Cart
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/checkout.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Checkout
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/order.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Order
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/product-details.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Product Details
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/terms-and-conditions.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Terms And Conditions
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/privacy-policy.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Privacy Policy
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/return-policy.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Return and Refund Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class="fw-bolder mb-3">Contact Us</h5>
+                    <div class="d-flex justify-content-start align-items-start my-2">
+                        <span class="me-3">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class="fw-light">Toulkok, Phnom Penh, Cambodia</span>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-start my-2">
+                        <span class="me-3">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </span>
+                        <span class="fw-light">+855 61339957</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col text-center pt-3">
+                    <i class="fa-regular fa-copyright"></i> Copyright by CC.Thanun
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Bootstrap JS-->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!--Traslator JS-->
+    <script src="../js/translator.js"></script>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kmlpandey77/bootnavbar@v1.1.1/js/bootnavbar.js"></script>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+              elmnt = z[i];
+              /*search for elements with a certain attribute:*/
+              file = elmnt.getAttribute("w3-include-html");
+              if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                  if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    /*remove the attribute, and call this function once more:*/
+                    elmnt.removeAttribute("w3-include-html");
+                    includeHTML();
+                  }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+              }
+            }
+          };
+    </script>
+    <script>
+        includeHTML();
+        new bootnavbar();
+    </script>  
+</body>
+</html>

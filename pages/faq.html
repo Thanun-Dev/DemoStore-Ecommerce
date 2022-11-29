@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Store</title>
+    <link rel="shortcut icon" href="../img/online-shopping.png" type="image/x-icon">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Hover Dropdown CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kmlpandey77/bootnavbar@v1.1.1/css/bootnavbar.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <!--Top navbar-->
+    <nav class="nav bg-blue ">
+        <div class="container-md d-flex align-items-center justify-content-between py-1">
+          <div>
+          <button type="button" class="btn border-0 p-0">
+              <a href="https://www.google.com/maps?q=Cambodia" target="_blank" class="nav-link p-1 text-white text-uppercase">
+              <i class="fa-solid fa-earth-asia"></i>
+              <span>Cambodia</span>
+              </a>
+          </button>
+          <button type="button" class="btn border-0 p-0">
+              <a href="tel:+855 61339957" class="nav-link p-1 text-white text-uppercase">
+              <i class="fa-solid fa-phone-volume"></i>
+              <span>+855 61339957</span>
+          </a>
+          </button>
+          </div>
+          <div class="translator">
+              <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="glink nturl notranslate"><img src="../img/en.svg" height="24" width="24" alt="English" /> <span class="text-white">EN</span></a> <a href="#" onclick="doGTranslate('en|km');return false;" title="ភាសាខ្មែរ" class="glink nturl notranslate"><img src="../img/km.svg" height="24" width="24" alt="ភាសាខ្មែរ" /> <span class="text-white">KH</span></a>
+              <div id="google_translate_element2"></div>
+          </div>
+          <div class="d-none d-lg-flex">
+              <a href="https://www.facebook.com/thanun2903" class="nav-link text-white px-2">
+                  <i class="fa-brands fa-facebook fa-lg"></i>
+              </a>
+              <a href="https://www.instagram.com/cc_thanun" class="nav-link text-white px-2">
+                  <i class="fa-brands fa-instagram fa-lg"></i>
+              </a>
+              <a href="https://twitter.com/mrrdemo" class="nav-link text-white px-2">
+                  <i class="fa-brands fa-twitter fa-lg"></i>
+              </a>
+              <a href="mailto: cc.thanun@gmail.com" class="nav-link text-white px-2">
+                  <i class="fa-regular fa-envelope fa-lg"></i>
+              </a>
+          </div>
+        </div>
+      </nav>
+      <!--End Top navbar-->
+
+    <!--Middle Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_navbar">
+        <div class="container-md">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="../index.html" class="navbar-brand mx-auto">
+            <img src="../img/Demo-logo.png" alt="Logo">
+            </a>
+            <div class="order-lg-last me-2">
+                <div class="btn-group d-none d-lg-inline">
+                    <button type="button" class="btn border-0 d-none d-lg-inline pe-0">
+                        <a href="../pages/myaccount.html" class="nav-link">
+                            <i class="fa-solid fa-user fa-lg"></i>
+                            My Account
+                        </a>
+                    </button>
+                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../pages/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                      <li><a class="dropdown-item" href="../pages/register.html"><i class="fa-regular fa-address-card"></i> Register</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="../pages/order-history.html"><i class="fa-solid fa-clock-rotate-left"></i> Order History</a></li>
+                    </ul>
+                  </div>
+                <button type="button" class="btn position-relative border-0">
+                    <a href="../pages/wishlist.html" class="nav-link">
+                    <span class="d-none d-md-inline">Wishlist</span>
+                    <i class="fa fa-heart fa-lg"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">5</span>
+                    </a>
+                </button>
+                <button type="button" class="btn position-relative border-0 dropdown">
+                    <a href="../pages/cart.html" class="nav-link">
+                    <span class="d-none d-md-inline">Cart</span>
+                    <i class="fa fa-shopping-cart fa-lg"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">5</span>
+                    
+                    </a>
+                    <div class="dropdown-menu animate__animated animate__fadeIn" style="min-width: 350px !important; right:0 !important; top:100% !important;">
+                        <div w3-include-html="../pages/minicart.html"></div> 
+                      </div>
+                </button>
+                
+            </div>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center d-lg-none">
+                    <li class="nav-item p-2">
+                        <a href="../index.html" class="nav-link text-uppercase text-blue"  aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/shop.html" class="nav-link text-uppercase text-blue">Shop</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/blog.html" class="nav-link text-uppercase text-blue">Blog</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/about.html" class="nav-link text-uppercase text-blue">About</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/contact.html" class="nav-link text-uppercase text-blue">Contact</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/faq.html" class="nav-link text-uppercase text-blue">FAQ</a>
+                    </li>
+                    <li class="nav-item p-2">
+                                <a href="../pages/myaccount.html" class="nav-link collapsed">
+                                    <i class="fa-solid fa-user fa-lg"></i>
+                                    My Account
+                                </a>
+                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="../pages/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                              <li><a class="dropdown-item" href="../pages/register.html"><i class="fa-regular fa-address-card"></i> Register</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="../pages/order-history.html"><i class="fa-solid fa-clock-rotate-left"></i> Order History</a></li>
+                            </ul>
+                    </li>
+                </ul>
+                <form class="d-flex container" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--End Middle navbar-->
+    
+    <!--Menu Navbar-->
+    <div class="bg-blue d-none d-lg-block">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item p-2">
+                    <a href="../index.html" class="nav-link text-uppercase text-white"  aria-current="page">Home</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="../pages/shop.html" class="nav-link text-uppercase text-white">Shop</a>
+                </li>
+                 <li class="nav-item p-2">
+                    <a href="../pages/blog.html" class="nav-link text-uppercase text-white">Blog</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="../pages/about.html" class="nav-link text-uppercase text-white">About</a>
+                </li>
+                 <li class="nav-item p-2">
+                    <a href="../pages/contact.html" class="nav-link text-uppercase text-white">Contact</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="../pages/faq.html" class="nav-link text-uppercase text-white">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--End Menu Navbar-->
+    
+    <div class="container p-5">
+        <section>
+            <h1 class="text-center mb-4 pb-2 text-primary fw-bold">FAQ</h1>
+            <p class="text-center mb-5">
+              Find the answers for the most frequently asked questions below
+            </p>
+          
+            <div class="row">
+              <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fa-solid fa-file-invoice-dollar"></i> How much do I have to pay for shipping?</h6>
+                <p>The shipping fee is depending on your delivery address.</p>
+              </div>
+          
+              <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fa-solid fa-truck-fast"></i> Are you shipping to different country as well?</h6>
+                <p>
+                  <strong><u>We're sorry!</u></strong> We are local store, so we can delivery within Cambodia only.
+                </p>
+              </div>
+          
+              <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fa-solid fa-shield-halved"></i> Is my product secure when shipping?
+                </h6>
+                <p><strong><u>Absolutely!</u></strong> Your items is secure with our delivery service. We only provide you the high quality experience.
+                </p>
+              </div>
+          
+              <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fa-regular fa-money-bill-1"></i> Are you accepting Cast-On Delivery?
+                </h6>
+                <p>We do accepting Cash-On Delivery!
+                </p>
+              </div>
+          
+              <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fa-solid fa-sack-dollar"></i> Why there is an extra charge on my order?
+                </h6>
+                <p>It's a packaging fee for delivery.</p>
+              </div>
+          
+              <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fa-solid fa-user-shield"></i> Are my payment details secure with this website?</h6>
+                <p><strong><u>Of course!</u></strong> We use high quality system which secure the customer details.
+                </p>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fa-solid fa-rotate-left"></i> How do I return the items?</h6>
+                <p>By submiting a ticket to us and we will ask the delivery to pick it up.
+                </p>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fa-solid fa-hand-holding-dollar"></i> Can I refund my money back?</h6>
+                <p>Within 30 days if the products is still new, we can return your money back.
+                </p>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fa-solid fa-receipt"></i> What if I lose the receipt?</h6>
+                <p>We're so sorry but you won't be able to return your items.
+                </p>
+              </div>
+            </div>
+          </section>
+    </div>
+
+
+    <!--Footer-->
+    <footer class="footer-bg pt-5 pb-3">
+        <div class="container">
+            <div class="row text-white g-4">
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <a href="../index.html" class="text-uppercase text-decoration-none text-white brand display-5 fw-bold">DEMO Store</a>
+                    <p class="text-white mt-3">Welcome to DEMO Store. We will bring you only high quality products.</p>
+                    <div>
+                        <ul class="list-unstyled d-flex">
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">
+                                    <i class="fa-brands fa-facebook fa-lg fs-4 me-4"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">
+                                    <i class="fa-brands fa-instagram fa-lg fs-4 me-4"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">
+                                    <i class="fa-brands fa-twitter fa-lg fs-4 me-4"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class=" fw-bolder">Menu</h5>
+                    <ul class=" list-unstyled">
+                        <li class="my-3">
+                            <a href="../index.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Home
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/shop.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Shop
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/blog.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Blog
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/about.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>About
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/faq.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>FAQ
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/category.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Category
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class="fw-bolder">My Account</h5>
+                    <ul class=" list-unstyled">
+                        <li class="my-3">
+                            <a href="../pages/myaccount.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Account Profile
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/register.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Register
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/login.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Login
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/wishlist.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Wishlist
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/order-history.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Order History
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class="fw-bolder">Pages</h5>
+                    <ul class=" list-unstyled">
+                        <li class="my-3">
+                            <a href="../pages/cart.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Cart
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/minicart.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Mini Cart
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/checkout.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Checkout
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/order.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Order
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/product-details.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Product Details
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/terms-and-conditions.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Terms And Conditions
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/privacy-policy.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Privacy Policy
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/return-policy.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Return and Refund Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class="fw-bolder mb-3">Contact Us</h5>
+                    <div class="d-flex justify-content-start align-items-start my-2">
+                        <span class="me-3">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class="fw-light">Toulkok, Phnom Penh, Cambodia</span>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-start my-2">
+                        <span class="me-3">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </span>
+                        <span class="fw-light">+855 61339957</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col text-center pt-3">
+                    <i class="fa-regular fa-copyright"></i> Copyright by CC.Thanun
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Bootstrap JS-->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!--Traslator JS-->
+    <script src="../js/translator.js"></script>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kmlpandey77/bootnavbar@v1.1.1/js/bootnavbar.js"></script>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+              elmnt = z[i];
+              /*search for elements with a certain attribute:*/
+              file = elmnt.getAttribute("w3-include-html");
+              if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                  if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    /*remove the attribute, and call this function once more:*/
+                    elmnt.removeAttribute("w3-include-html");
+                    includeHTML();
+                  }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+              }
+            }
+          };
+    </script>
+    <script>
+        includeHTML();
+        new bootnavbar();
+    </script>  
+</body>
+</html>

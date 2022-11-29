@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Store</title>
+    <link rel="shortcut icon" href="../img/online-shopping.png" type="image/x-icon">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Hover Dropdown CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kmlpandey77/bootnavbar@v1.1.1/css/bootnavbar.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <!--Top navbar-->
+    <nav class="nav bg-blue ">
+        <div class="container-md d-flex align-items-center justify-content-between py-1">
+          <div>
+          <button type="button" class="btn border-0 p-0">
+              <a href="https://www.google.com/maps?q=Cambodia" target="_blank" class="nav-link p-1 text-white text-uppercase">
+              <i class="fa-solid fa-earth-asia"></i>
+              <span>Cambodia</span>
+              </a>
+          </button>
+          <button type="button" class="btn border-0 p-0">
+              <a href="tel:+855 61339957" class="nav-link p-1 text-white text-uppercase">
+              <i class="fa-solid fa-phone-volume"></i>
+              <span>+855 61339957</span>
+          </a>
+          </button>
+          </div>
+          <div class="translator">
+              <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="glink nturl notranslate"><img src="../img/en.svg" height="24" width="24" alt="English" /> <span class="text-white">EN</span></a> <a href="#" onclick="doGTranslate('en|km');return false;" title="ភាសាខ្មែរ" class="glink nturl notranslate"><img src="../img/km.svg" height="24" width="24" alt="ភាសាខ្មែរ" /> <span class="text-white">KH</span></a>
+              <div id="google_translate_element2"></div>
+          </div>
+          <div class="d-none d-lg-flex">
+              <a href="https://www.facebook.com/thanun2903" class="nav-link text-white px-2">
+                  <i class="fa-brands fa-facebook fa-lg"></i>
+              </a>
+              <a href="https://www.instagram.com/cc_thanun" class="nav-link text-white px-2">
+                  <i class="fa-brands fa-instagram fa-lg"></i>
+              </a>
+              <a href="https://twitter.com/mrrdemo" class="nav-link text-white px-2">
+                  <i class="fa-brands fa-twitter fa-lg"></i>
+              </a>
+              <a href="mailto: cc.thanun@gmail.com" class="nav-link text-white px-2">
+                  <i class="fa-regular fa-envelope fa-lg"></i>
+              </a>
+          </div>
+        </div>
+      </nav>
+      <!--End Top navbar-->
+
+    <!--Middle Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_navbar">
+        <div class="container-md">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="../index.html" class="navbar-brand mx-auto">
+            <img src="../img/Demo-logo.png" alt="Logo">
+            </a>
+            <div class="order-lg-last me-2">
+                <div class="btn-group d-none d-lg-inline">
+                    <button type="button" class="btn border-0 d-none d-lg-inline pe-0">
+                        <a href="../pages/myaccount.html" class="nav-link">
+                            <i class="fa-solid fa-user fa-lg"></i>
+                            My Account
+                        </a>
+                    </button>
+                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../pages/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                      <li><a class="dropdown-item" href="../pages/register.html"><i class="fa-regular fa-address-card"></i> Register</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="../pages/order-history.html"><i class="fa-solid fa-clock-rotate-left"></i> Order History</a></li>
+                    </ul>
+                  </div>
+                <button type="button" class="btn position-relative border-0">
+                    <a href="../pages/wishlist.html" class="nav-link">
+                    <span class="d-none d-md-inline">Wishlist</span>
+                    <i class="fa fa-heart fa-lg"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">5</span>
+                    </a>
+                </button>
+                <button type="button" class="btn position-relative border-0 dropdown">
+                    <a href="../pages/cart.html" class="nav-link">
+                    <span class="d-none d-md-inline">Cart</span>
+                    <i class="fa fa-shopping-cart fa-lg"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">5</span>
+                    
+                    </a>
+                    <div class="dropdown-menu animate__animated animate__fadeIn" style="min-width: 350px !important; right:0 !important; top:100% !important;">
+                        <div w3-include-html="../pages/minicart.html"></div> 
+                      </div>
+                </button>
+                
+            </div>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center d-lg-none">
+                    <li class="nav-item p-2">
+                        <a href="../index.html" class="nav-link text-uppercase text-blue"  aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/shop.html" class="nav-link text-uppercase text-blue">Shop</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/blog.html" class="nav-link text-uppercase text-blue">Blog</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/about.html" class="nav-link text-uppercase text-blue">About</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/contact.html" class="nav-link text-uppercase text-blue">Contact</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="../pages/faq.html" class="nav-link text-uppercase text-blue">FAQ</a>
+                    </li>
+                    <li class="nav-item p-2">
+                                <a href="../pages/myaccount.html" class="nav-link collapsed">
+                                    <i class="fa-solid fa-user fa-lg"></i>
+                                    My Account
+                                </a>
+                            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="../pages/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                              <li><a class="dropdown-item" href="../pages/register.html"><i class="fa-regular fa-address-card"></i> Register</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="../pages/order-history.html"><i class="fa-solid fa-clock-rotate-left"></i> Order History</a></li>
+                            </ul>
+                    </li>
+                </ul>
+                <form class="d-flex container" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--End Middle navbar-->
+    
+    <!--Menu Navbar-->
+    <div class="bg-blue d-none d-lg-block">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item p-2">
+                    <a href="../index.html" class="nav-link text-uppercase text-white"  aria-current="page">Home</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="../pages/shop.html" class="nav-link text-uppercase text-white">Shop</a>
+                </li>
+                 <li class="nav-item p-2">
+                    <a href="../pages/blog.html" class="nav-link text-uppercase text-white">Blog</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="../pages/about.html" class="nav-link text-uppercase text-white">About</a>
+                </li>
+                 <li class="nav-item p-2">
+                    <a href="../pages/contact.html" class="nav-link text-uppercase text-white">Contact</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="../pages/faq.html" class="nav-link text-uppercase text-white">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--End Menu Navbar-->
+
+    <div class="container my-3">
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html" class=" nav-link text-primary">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Shop</li>
+            </ol>
+          </nav>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="#" id="pop" style="cursor:zoom-in;">
+                    <img id="imageresource" src="../img/product/macbook-pro-14.png" class=" img-thumbnail">
+                </a>
+                
+                <!-- Creates the bootstrap modal where the image will appear -->
+                <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close btn btn-secondary " data-bs-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only-focusable">Close</span></button>
+                        <h4 class="modal-title " id="myModalLabel">Image preview</h4>
+                      </div>
+                      <div class="modal-body">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active  bg-primary" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="bg-primary" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="bg-primary" aria-label="Slide 3"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="bg-primary" aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="../img/product/macbook-pro-14-1.png" class="d-block w-100 img-fluid" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../img/product/macbook-pro-14-2.png" class="d-block w-100 img-fluid" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../img/product/macbook-pro-14-3.png" class="d-block w-100 img-fluid" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../img/product/macbook-pro-14-4.png" class="d-block w-100 img-fluid" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon bg-primary" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon bg-primary" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="share mt-3">
+                    
+                    <div class="d-flex align-items-center">
+                        <h5>Share on: </h5>
+                        <a href="https://www.facebook.com/thanun2903" class="nav-link text-primary px-2" target="_blank">
+                            <i class="fa-brands fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cc_thanun" class="nav-link text-primary px-2" target="_blank">
+                            <i class="fa-brands fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://twitter.com/mrrdemo" class="nav-link text-primary px-2" target="_blank">
+                            <i class="fa-brands fa-twitter fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 border p-3 mt-4 mt-md-0 rounded">
+                <h2 class="text-primary text-center">MacBook Pro 14</h2>
+                <hr class="w-25 mx-auto">
+                <p class="text-danger fw-bolder h5 text-center">1.859,00$</p>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th><label for="color" class="form-label">Color</label></th>
+                            <td>
+                                <select class="form-select rounded-5" id="color">
+                                    <option value="">Choose Option</option>
+                                    <option value="sliver" selected class="">Sliver</option>
+                                    <option value="space-gray">Space Grey</option>
+                                </select>
+                            </td>
+                        <tr>
+                            <th><label for="specs" class="form-label">Specs</label></th>
+                            <td>
+                                <select class="form-select rounded-5" id="color">
+                                    <option value="">Choose Option</option>
+                                    <option value="m1-pro-chip-ram-16gb-ssd-512gb" selected class="">M1 Pro Chip | RAM 16GB | SSD 512GB</option>
+                                    <option value="m1-pro-chip-ram-16gb-ssd-1t">M1 Pro Chip | RAM 16GB | SSD 1T</option>
+                                    <option value="m1-pro-chip-ram-32gb-ssd-512gb">M1 Pro Chip | RAM 32GB | SSD 512GB</option>
+                                    <option value="m1-max-chip-ram-32gb-ssd-1t">M1 Max Chip | RAM 32GB | SSD 1T</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center">
+                    <div class="description text-muted">
+                        <p>Apple M1 Pro with 8-core CPU, 14-core GPU, 16-core Neural Engine</p>
+                        <p>16GB unified memory</p>
+                        <p>512GB SSD storage</p>
+                        <p>67W USB-C Power Adapter</p>
+                        <p>14-inch Liquid Retina XDR display</p>
+                        <p>Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port</p>
+                        <p>Backlit Magic Keyboard with Touch ID – US English</p>
+                    </div>
+                    <div class="price">
+                        <p class=" text-danger fw-bolder">1.859,00$</p>
+                    </div>
+
+                </div>
+                <div class="button text-center">
+                    <div class="d-inline-flex" >
+                        <button type="button" class="btn btn-light rounded-0 rounded-start"><i class="fa-solid fa-minus"></i></button>
+                        <input type="text" value="1" step="1" min="1" class="text-center border-0 bg-light rounded-0 px-2 text-primary" style="outline:0; width:30px;">
+                        <button type="button" class="btn btn-light rounded-0 rounded-end"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <button type="submit" class="btn btn-primary ms-3">Add to cart</button>
+                </div>
+                <hr class="w-50 mx-auto">
+                <div class="wishlist text-center my-3">
+                    <a href="#" class="nav-link text-success">Add to Wishlist</a>
+                </div>
+                <hr class="w-50 mx-auto">
+                <div class="category d-flex gap-3 justify-content-center">
+                    <span>Category: </span>
+                    <a href="#" class="nav-link text-primary">Laptop</a>
+                </div>
+                <hr class="w-50 mx-auto">
+                <div class="tag d-flex justify-content-center">
+                    <span>Tag: </span>
+                    <a href="#" class="nav-link text-muted ms-2">Laptop</a>,
+                    <a href="#" class="nav-link text-muted ms-2">Apple</a>,
+                    <a href="#" class="nav-link text-muted ms-2">M1</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-details">
+        <div class="container">
+            
+            <div class="">
+                <ul class=" list-unstyled" id="title">
+                    <li class=" nav-item d-flex gap-2"><a href="#" role="tab" class="nav-link text-primary text-uppercase fw-bold collapsed pe-3 mb-2 " data-bs-toggle="collapse" data-bs-target="#description" aria-expanded="false" aria-controls="description">Description</a>
+                        <div class="collapse ps-3 border-start show" id="description" data-bs-parent="#title">
+                            <p><strong>Specs</strong></p>
+                            <ul>
+                            <li>CPU: Apple M1 Max with 10-core CPU, 24-core GPU, 16-core Neural Engine | Apple M1 Pro with 10-core CPU, 16-core GPU, 16-core Neural Engine</li>
+                            <li>Ram: Up to 32GB Unified Memory</li>
+                            <li>Storage: Up to 1T SSD</li>
+                            <li>Display: 14.2” Liquid Retina XDR display</li>
+                            <li>3.5mm Headphone Jack</li>
+                            <li>1080p FaceTime HD camera</li>
+                            <li>Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port</li>
+                            <li>Magic Keyboard with Touch ID</li>
+                            <li>Force Touch trackpad</li>
+                            <li>67W USB-C Power Adapter</li>
+                            <li>Color: Silver, Space Grey</li>
+                            <li>Weight: 1.6kg</li>
+                            </ul>
+                            <p><strong>Warranty</strong></p>
+                            <ul>
+                            <li>1-year hardware</li>
+                            <li>No warranty for screen, battery, keyboard, fan &amp; speaker, adapter</li>
+                            </ul>
+                            <p><strong>FREE: Sleeve, Mouse Wireless, Mouse Pad, Flash 32GB.</strong></p>
+                        </div>
+                    </li>
+                    <li class=" nav-item d-flex gap-2"><a href="#" role="tab" class="nav-link text-primary text-uppercase fw-bold collapsed pe-3 mb-2 " data-bs-toggle="collapse" data-bs-target="#additonal" aria-expanded="false" aria-controls="addtional">Additional</a>
+                        <div class="collapse ps-3 border-start" id="additonal" data-bs-parent="#title">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th>Weight</th>
+                                        <td>1,6 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Color</th>
+                                        <td>Silver, Space Gray</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Specs</th>
+                                        <td>M1 Pro Chip | RAM 16GB | SSD 512GB, M1 Pro Chip | RAM 16GB | SSD 1T, M1 Pro Chip | RAM 32GB | SSD 512GB, M1 Max Chip | RAM 32GB | SSD 1T</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" role="tab" class="nav-link text-primary text-uppercase fw-bold collapsed pe-3 mb-2 "  data-bs-toggle="collapse" data-bs-target="#review" aria-expanded="false" aria-controls="review">Reviews <span class="text-muted">(2)</span></a>
+                        <div class="collapse pt-3 border-top container" id="review" data-bs-parent="#title">
+                            <div class="row">
+                                <div class="col-12 col-lg-8 ">
+                            <form action="#" class="form shadow p-3 rounded-3" >
+                                <h4>MacBook Pro 14</h4>
+                                <div class="rating d-flex align-items-center gap-2">
+                                    <div class="ratings">
+                                        <i class="fa fa-star text-info"></i>
+                                        <i class="fa fa-star text-info"></i>
+                                        <i class="fa fa-star text-info"></i>
+                                        <i class="fa fa-star text-info"></i>
+                                        <i class="fa fa-star text-secondary"></i>
+                                    </div>
+                                    <h6 class="text-muted mt-2">2 Reviews</h6>
+                                </div>
+                                <p class="mt-5 d-flex flex-column">
+                                    <label for="comment" class=" form-label">Your review&nbsp;<span class="required">*</span></label>
+                                    <textarea class=" form-control" id="comment" name="comment" cols="20" rows="8" required="" style="resize: none;"></textarea></p>
+                                <p class="d-flex flex-column">
+                                    <label for="author" class=" form-label">Name&nbsp;<span class="required">*</span></label>
+                                    <input class=" form-control" id="author" name="author" type="text" value="" size="30" required=""></p>
+                                <p class="d-flex flex-column">
+                                    <label for="email" class=" form-label">Email&nbsp;<span class="required">*</span></label>
+                                    <input class=" form-control" id="email" name="email" type="email" value="" size="30" required=""></p>
+                                <p class="d-flex align-items-center gap-2">
+                                    <input id="wp-comment-cookies-consent" class=" form-check-input p-2" type="checkbox" value="yes"> 
+                                    <label for="wp-comment-cookies-consent" class=" form-check-label" >Save my name, email, and website in this browser for the next time I comment.</label></p>
+                                <p class="form-submit">
+                                    <input name="submit" type="submit" id="submit" class="btn btn-outline-primary" value="Submit"> 
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="related-product my-4">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-secondary">Related Product</h5>
+                        <hr class="w-25">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-6">
+                        <div class="card text-center border-0">
+                            <img src="../img/product/macbook-air-m2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Macbook Air M2</h5>
+                              <p class="card-text">1.279,00$</p>
+                              <a href="#" class="btn btn-primary">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="card text-center border-0">
+                            <img src="../img/product/macbook-pro-13.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">MacBook Pro 13</h5>
+                              <p class="card-text">1.289,00$</p>
+                              <a href="#" class="btn btn-primary">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="card text-center border-0">
+                            <img src="../img/product/macbook-pro-14.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">MacBook Pro 14</h5>
+                              <p class="card-text">1.859,00$</p>
+                              <a href="#" class="btn btn-primary">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="card text-center border-0">
+                            <img src="../img/product/macbook-pro-16.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">MacBook Pro 16</h5>
+                              <p class="card-text">2.369,00$</p>
+                              <a href="#" class="btn btn-primary">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!--Footer-->
+    <footer class="footer-bg pt-5 pb-3">
+        <div class="container">
+            <div class="row text-white g-4">
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <a href="../index.html" class="text-uppercase text-decoration-none text-white brand display-5 fw-bold">DEMO Store</a>
+                    <p class="text-white mt-3">Welcome to DEMO Store. We will bring you only high quality products.</p>
+                    <div>
+                        <ul class="list-unstyled d-flex">
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">
+                                    <i class="fa-brands fa-facebook fa-lg fs-4 me-4"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">
+                                    <i class="fa-brands fa-instagram fa-lg fs-4 me-4"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">
+                                    <i class="fa-brands fa-twitter fa-lg fs-4 me-4"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class=" fw-bolder">Menu</h5>
+                    <ul class=" list-unstyled">
+                        <li class="my-3">
+                            <a href="../index.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Home
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/shop.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Shop
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/blog.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Blog
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/about.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>About
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/faq.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>FAQ
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/category.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Category
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class="fw-bolder">My Account</h5>
+                    <ul class=" list-unstyled">
+                        <li class="my-3">
+                            <a href="../pages/myaccount.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Account Profile
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/register.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Register
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/login.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Login
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/wishlist.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Wishlist
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/order-history.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Order History
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class="fw-bolder">Pages</h5>
+                    <ul class=" list-unstyled">
+                        <li class="my-3">
+                            <a href="../pages/cart.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Cart
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/minicart.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Mini Cart
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/checkout.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Checkout
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/order.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Order
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/product-details.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Product Details
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/terms-and-conditions.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Terms And Conditions
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/privacy-policy.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Privacy Policy
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="../pages/return-policy.html" class="text-white text-decoration-none">
+                                <i class=" fas fa-chevron-right me-1"></i>Return and Refund Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h5 class="fw-bolder mb-3">Contact Us</h5>
+                    <div class="d-flex justify-content-start align-items-start my-2">
+                        <span class="me-3">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class="fw-light">Toulkok, Phnom Penh, Cambodia</span>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-start my-2">
+                        <span class="me-3">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </span>
+                        <span class="fw-light">+855 61339957</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col text-center pt-3">
+                    <i class="fa-regular fa-copyright"></i> Copyright by CC.Thanun
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Bootstrap JS-->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!--Traslator JS-->
+    <script src="../js/translator.js"></script>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script>
+        $("#pop").on("click", function() {
+            $('#imagepreview').attr('src', $('#imageresource').attr('src')); 
+            $('#imagemodal').modal('show'); 
+         });
+         
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+:root{
+    --blue: #1e73be;
+    --green: #81d742;
+    --gray: rgb(192,212,227);
+}
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.bg-blue{
+    background-color:var(--blue) !important;
+}
+.bg-gray {
+    background-color: var(--gray) !important;
+}
+.footer-bg {
+    background-color:  rgba(30,115,190,0.8);
+}
+
+.navbar-brand img{
+    width: 200px;
+    transition: 1s;
+}
+.navbar-brand img:hover {
+    scale: 1.1;
+}
+.nav-link:hover {
+    color: var(--green) !important;
+}
+.text-blue{
+    color: var(--blue) !important;
+}
+.card img:hover {
+    scale: 1.1;
+    transition: 1s;
+}
+.brand img:hover {
+    scale: 1.1;
+    transition: 1s;
+}
+.promotion {
+    width: 100%;
+    height: 50vh;
+    background: url(../img/christmas1.png) no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.newspaper {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 255, 0.1), rgba(0, 0, 255, 0.2)), url(../img/banner.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 4rem 0;
+    text-align: center;
+}
+footer a{
+    transition: color 0.3s ease !important;
+}
+footer a:hover {
+    color: var(--green) !important;
+}
+@media (max-width: 575px) {
+    .border-end {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+    .border-end-0 {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+    .promotion {
+        height: 35vh;
+    }
+}
+.profile-cover {
+    background: url(../img/profile-cover.png) no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 250px;
+}
+.profile-author {
+    position: relative;
+    z-index: 9;
+    margin-top: -100px;
+}
+tbody {
+    vertical-align: middle !important;
+}
+
+
+
+/***** Translator CSS *****/
+#goog-gt-tt{display:none!important;}.goog-te-banner-frame{display:none!important;}.goog-te-menu-value:hover{text-decoration:none!important;}.goog-text-highlight{background-color:transparent!important;box-shadow:none!important;}body{top:0!important;}#google_translate_element2{display:none!important;}.translator a{margin-left:10px;}
+/**** End Translator CSS *****/
+
